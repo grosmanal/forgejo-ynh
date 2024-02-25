@@ -66,8 +66,6 @@ ynh_app_setting_set --app="$app" --key=mirror_disable_new_push --value=$mirror_d
 ynh_app_setting_set --app="$app" --key=mirror_default_interval --value=$mirror_default_interval
 ynh_app_setting_set --app="$app" --key=mirror_min_interval --value=$mirror_min_interval
 
-
-
 ssh_port=$(grep -P "Port\s+\d+" /etc/ssh/sshd_config | grep -P -o "\d+")
 ynh_add_config --template="app.ini" --destination="$install_dir/custom/conf/app.ini"
 
